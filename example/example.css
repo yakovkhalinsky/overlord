@@ -1,0 +1,37 @@
+body {
+  font-family: Arial;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+p {
+  width: 100%;
+}
+
+label {
+  width: 150px;
+}
+
+select {
+  font-family: Arial;
+  font-size: 12px;
+  width: 250px;
+}
+
+input {
+  font-family: Arial;
+  font-size: 12px;
+  width: 250px;
+}
+
+.output {
+  width: 250px;
+  font-weight: bold;
+}
+
+#console {
+  padding: 15px 15px 15px 15px;
+  background: #999;
+}

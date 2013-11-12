@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Overlord: Examples</title>
+    <link rel="stylesheet" type="text/css" href="example.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
+    <script type="text/javascript" src="../lib/ninebytes.overlord.min.js"></script>
+    <script type="text/javascript" src="example.js"></script>
+  </head>
+  <body>
+    <div ng-app="OverlordApp">
+      <div ng-controller="OverlordCtrl">
+        <h1>Experimental Angular JS Aggregated Watcher</h1>
+        <div>
+          <label>Text Input 1</label>
+          <input type="text" ng-model="text1"/>
+          <p class="output">{{text1}}</p>
+        </div>
+        <div>
+          <label>Text Input 2</label>
+          <input type="text" ng-model="text2"/>
+          <p class="output">{{text2}}</p>      
+        </div>
+        <div>
+          <label>Select 1</label>
+          <select ng-model="select1">
+            <option value="select1">select1</option>
+            <option value="select2">select2</option>
+            <option value="select3">select3</option>
+            <option value="select4">select4</option>             
+            <option value="select5">select5</option>   
+          </select>
+          <p class="output">{{select1}}</p>      
+        </div>
+        <div>
+          <label>Text Input 3</label>
+          <input type="text" ng-model="text3"/>
+          <p class="output">{{text3}}</p>      
+        </div>        
+      </div>
+    </div>
+    <div id="console"></div>   
+  </body>
+</html>
