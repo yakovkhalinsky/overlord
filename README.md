@@ -2,9 +2,17 @@
 
 Overlord was designed as a utility to help manage aggregate watches in Angular.
 
-As it just compares collections of values, it could in theory be used for monitoring changes on generic collections.
+As it just compares collections of values or objects, it could in theory be used for monitoring changes on generic collections.
 
 Overlord provides a couple of options in regards to managing callbacks on changes.
+
+
+**DEPENDENCIES**
+
+Overlord depends on having either the lodash or underscore library to do equality checking.
+
+lodash website: <http://lodash.com/>
+underscore website: <http://underscorejs.org/>
 
 
 **USAGE**
@@ -60,7 +68,7 @@ A working set of examples can be found in the ```/example``` directory.
 
 
 **TO DO**
--  Add support for object comparisons
+-  Add unit tests
 -  Better documentation
 
 

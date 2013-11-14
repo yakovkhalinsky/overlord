@@ -2,8 +2,9 @@
   <head>
     <title>Overlord: Examples</title>
     <link rel="stylesheet" type="text/css" href="example.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.3.0/lodash.min.js"></script>
     <script type="text/javascript" src="../lib/ninebytes.overlord.min.js"></script>
     <script type="text/javascript" src="example.js"></script>
   </head>
@@ -36,7 +37,17 @@
           <label>Text Input 3</label>
           <input type="text" ng-model="text3"/>
           <p class="output">{{text3}}</p>      
-        </div>        
+        </div>
+          <div>
+              <label>Object Text1 Input</label>
+              <input type="text" ng-model="obj.text1"/>
+              <p class="output">{{obj.text1}}</p>
+          </div>
+          <div>
+              <label>Object Text2 Input</label>
+              <input type="text" ng-model="obj.text2"/>
+              <p class="output">{{obj.text2}}</p>
+          </div>
       </div>
     </div>
     <div id="console"></div>   
