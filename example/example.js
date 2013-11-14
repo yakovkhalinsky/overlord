@@ -3,9 +3,10 @@ var app = angular.module('OverlordApp',[]);
  
 app.controller('OverlordCtrl', ['$scope', function(scope) {
   scope.text1 = 'foo';
-  scope.text2 = 'bar';  
+  scope.text2 = 'bar';
   scope.text3 = 'boo';
-  scope.select1 = 'select1';  
+  scope.select1 = 'select1';
+  scope.obj = {text1: 'abcd', text2: 'efgh'};
   
   var overlord = new ninebytes.Overlord();
 
@@ -14,6 +15,7 @@ app.controller('OverlordCtrl', ['$scope', function(scope) {
   //  changes object when the WATCHER function is called
   overlord.addWatcher('text1');
   overlord.addWatcher('text2');
+  overlord.addWatcher('obj');
 
   // We will use this as our generic callback function
   var cb = function (newVal) { 
@@ -40,7 +42,7 @@ app.controller('OverlordCtrl', ['$scope', function(scope) {
     },
     true
   );
-  
+
   executeWatchers = function(newVals, oldVals, overlord) {
     changes = overlord.WATCHER(newVals, oldVals);
     
@@ -55,13 +57,13 @@ app.controller('OverlordCtrl', ['$scope', function(scope) {
   };
 
 
-  processCallbacks = function(changes) {
+  var processCallbacks = function(changes) {
     for (source in changes) {
       if(changes[source].cb) {
         changes[source].cb(changes[source].newVal, changes[source].oldVal);
       }
     }
-  }
+  };
 
 }]);
 
